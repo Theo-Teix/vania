@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vânia Alonso | Nutricionista clínica e esportiva funcional em São Paulo</title>
+<meta name="description" content="Vânia Alonso, nutricionista clínica e esportiva funcional há 22 anos. Saúde da mulher, estética e emagrecimento, gestação e infância, controle de doenças e performance. Atendimento on-line e presencial em São Paulo.">
+<link rel="canonical" href="https://nutri-vaniaalonso.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Vânia Alonso | O cuidado começa na rotina">
+<meta property="og:description" content="Nutricionista clínica e esportiva funcional há 22 anos. On-line e presencial em São Paulo.">
+<meta property="og:url" content="https://nutri-vaniaalonso.vercel.app/">
+<meta property="og:image" content="https://nutri-vaniaalonso.vercel.app/img/vania-abertura.jpg?v=1">
+<meta name="theme-color" content="#1B3125">
+<link rel="icon" href="img/favicon.png?v=1">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+<style>
+:root{
+  --floresta:#1B3125; --floresta-2:#14251B; --musgo:#2C4A36; --musgo-2:#365a42;
+  --creme:#F4F0E7; --creme-2:#EAE4D6; --linho:#D9C7A6; --folha:#8FC06F; --folha-viva:#A6D985;
+  --laranja:#E2793D; --laranja-t:#93421A; --tinta:#1A2A20; --tinta-2:#4A5A4F;
+  --serif:"Gloock", Georgia, serif; --sans:"Albert Sans", system-ui, sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1); --ease-io:cubic-bezier(.65,0,.35,1);
+  --wrap:1200px; --gut:clamp(20px,4vw,48px);
+  --sombra:0 1px 2px rgba(20,37,27,.06), 0 12px 32px -12px rgba(20,37,27,.28);
+  --sombra-forte:0 2px 4px rgba(0,0,0,.12), 0 30px 60px -20px rgba(0,0,0,.55);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--tinta);background:var(--creme);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--folha);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2.2rem,4.4vw,3.6rem)}
+p{margin:0}
+.escuro{background:var(--floresta);color:var(--creme)}
+.sobre-linha{font-size:.95rem;font-weight:600;color:var(--laranja-t);margin:0 0 14px}
+.abertura .sobre-linha,.areas .sobre-linha,.pni .sobre-linha,.depo .sobre-linha{color:var(--folha)}
+.lead{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--tinta-2);max-width:56ch}
+.abertura .lead,.areas .lead,.pni .lead,.depo .lead,.agendar .lead{color:rgba(244,240,231,.9)}
+.grao::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:0;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .18s var(--ease),background-color .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-creme{background:var(--creme);color:var(--floresta);box-shadow:0 8px 24px -10px rgba(0,0,0,.5)}
+.btn-folha{background:var(--folha);color:var(--floresta-2);box-shadow:0 12px 32px -12px rgba(143,192,111,.7)}
+@media (hover:hover){.btn-creme:hover{background:#fff;transform:translateY(-2px)}.btn-folha:hover{background:var(--folha-viva);transform:translateY(-2px)}}
+
+/* topo */
+.topo{position:fixed;inset:0 0 auto;z-index:50;transition:background-color .35s,box-shadow .35s,transform .35s var(--ease)}
+.topo.cheio{background:rgba(20,37,27,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(217,199,166,.12)}
+.topo .wrap{display:flex;align-items:center;gap:28px;height:78px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme)}
+.marca svg{width:38px;height:38px;flex:none}
+.marca b{font-family:var(--serif);font-weight:400;font-size:1.32rem;line-height:1;display:block}
+.marca small{display:block;font-size:.72rem;letter-spacing:.04em;color:var(--linho);margin-top:4px}
+.menu{display:flex;gap:26px;margin-left:auto}
+.menu a{color:rgba(244,240,231,.82);text-decoration:none;font-size:.95rem;font-weight:500;position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--folha);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+@media (hover:hover){.menu a:hover{color:var(--creme)}.menu a:hover::after{transform:scaleX(1)}}
+.topo .btn{min-height:44px;padding:0 18px;font-size:.95rem}
+.abrir{display:none;margin-left:auto;width:48px;height:48px;border:1px solid rgba(217,199,166,.3);border-radius:14px;background:rgba(255,255,255,.04);cursor:pointer;place-items:center}
+.abrir span{display:block;width:20px;height:1.5px;background:var(--creme);position:relative;transition:transform .3s var(--ease)}
+.abrir span::before,.abrir span::after{content:"";position:absolute;left:0;width:20px;height:1.5px;background:var(--creme);transition:transform .3s var(--ease)}
+.abrir span::before{top:-6px}.abrir span::after{top:6px}
+.menu-aberto .abrir span{background:transparent}
+.menu-aberto .abrir span::before{transform:translateY(6px) rotate(45deg)}
+.menu-aberto .abrir span::after{transform:translateY(-6px) rotate(-45deg)}
+.gaveta{position:fixed;inset:0;z-index:49;background:var(--floresta-2);padding:110px var(--gut) 40px;display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.gaveta a{font-family:var(--serif);font-size:2rem;color:var(--creme);text-decoration:none;padding:8px 0;transform:translateY(12px);transition:transform .4s var(--ease)}
+.gaveta .btn{font-family:var(--sans);font-size:1rem;margin-top:22px;align-self:flex-start;padding:0 22px}
+.menu-aberto .gaveta{opacity:1;visibility:visible}
+.menu-aberto .gaveta a{transform:none}
+
+/* abertura */
+.abertura{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:
+  radial-gradient(900px 600px at 78% 40%,rgba(143,192,111,.20),transparent 60%),
+  radial-gradient(700px 500px at 10% 100%,rgba(217,199,166,.10),transparent 60%),
+  linear-gradient(160deg,#1f3a2b 0%,var(--floresta) 45%,var(--floresta-2) 100%);color:var(--creme);padding:120px 0 90px}
+.abertura .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(30px,5vw,72px);align-items:center;width:100%}
+.abertura h1{font-size:clamp(3.3rem,7.2vw,6.6rem);line-height:.96;margin:4px 0 28px}
+.abertura h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+.abertura h1 .l > span{display:block}
+.abertura h1 .ponto{color:var(--folha)}
+.abertura .lead{margin-bottom:26px}
+.local{display:inline-flex;align-items:center;gap:10px;padding:9px 16px 9px 12px;border-radius:999px;background:rgba(244,240,231,.07);border:1px solid rgba(217,199,166,.22);font-size:.94rem;color:var(--creme)}
+.local i{width:8px;height:8px;border-radius:50%;background:var(--folha);box-shadow:0 0 0 4px rgba(143,192,111,.22)}
+.abertura-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.descer{display:inline-flex;align-items:center;gap:10px;color:var(--creme);font-weight:600;text-decoration:none;padding:10px 0;border-bottom:1.5px solid rgba(143,192,111,.6)}
+.descer svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+@media (hover:hover){.descer:hover svg{transform:translateY(3px)}}
+
+.palco{position:relative;justify-self:center;width:min(100%,460px);aspect-ratio:460/600}
+.palco .flor-fundo{position:absolute;left:50%;top:50%;width:150%;height:auto;transform:translate(-50%,-50%);overflow:visible;pointer-events:none}
+.flor-fundo .contorno{fill:none;stroke:var(--laranja);stroke-width:1.1;stroke-linejoin:round;opacity:.85}
+.flor-fundo .petala-v{fill:rgba(143,192,111,.08);stroke:rgba(143,192,111,.35);stroke-width:.8}
+.flor-fundo g.gira{transform-origin:0 0;animation:girar 90s linear infinite}
+@keyframes girar{to{transform:rotate(360deg)}}
+.moldura{position:absolute;inset:0;border-radius:4px 46% 4px 46%;overflow:hidden;box-shadow:var(--sombra-forte);background:#24402f}
+.moldura img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.moldura::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,37,27,.55));pointer-events:none}
+.vidro{position:absolute;z-index:3;display:flex;flex-direction:column;gap:2px;padding:14px 18px;border-radius:18px;background:rgba(27,49,37,.48);border:1px solid rgba(244,240,231,.18);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 18px 40px -16px rgba(0,0,0,.6);color:var(--creme)}
+.vidro b{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1}
+.vidro span{font-size:.85rem;color:rgba(244,240,231,.8)}
+.vidro .grande{font-size:2.6rem}
+.v1{left:-12%;bottom:12%}
+.v2{right:-10%;bottom:30%}
+.v3{right:-6%;top:6%;flex-direction:row;align-items:center;gap:10px;padding:10px 16px 10px 12px}
+.v3 svg{width:26px;height:26px}
+.v3 span{color:var(--creme);font-weight:600;font-size:.88rem}
+.flutua{animation:flutua 7s ease-in-out infinite}
+.v2.flutua{animation-delay:-2.3s}.v3.flutua{animation-delay:-4.6s}
+@keyframes flutua{50%{translate:0 -8px}}
+.borda-onda{position:absolute;left:0;right:0;bottom:-1px;z-index:2;height:70px;width:100%}
+
+/* funcional */
+.funcional{position:relative;padding:clamp(80px,10vw,130px) 0 clamp(70px,8vw,110px);background:var(--creme)}
+.func-topo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:end}
+.citacao{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.45;color:var(--tinta);font-weight:400;margin:0;padding-left:26px;border-left:2px solid var(--laranja)}
+.citacao b{font-weight:700;color:var(--floresta)}
+.citacao cite{display:block;margin-top:14px;font-style:normal;font-size:.9rem;color:var(--tinta-2)}
+.principios{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;position:relative}
+.princ{position:relative;background:#fff;border-radius:22px;padding:30px 28px 30px;box-shadow:var(--sombra);transition:transform .35s var(--ease),box-shadow .35s}
+.princ:nth-child(2){transform:translateY(28px)}
+.princ:nth-child(3){transform:translateY(56px)}
+@media (hover:hover){.princ:hover{box-shadow:0 2px 4px rgba(20,37,27,.08),0 24px 48px -16px rgba(20,37,27,.35)}}
+.princ svg{width:58px;height:58px;margin-bottom:16px}
+.princ h3{font-size:1.65rem;margin-bottom:10px;color:var(--floresta)}
+.princ p{color:var(--tinta-2);font-size:.98rem}
+.faixa-comida{margin-top:clamp(90px,10vw,120px);position:relative;border-radius:28px;overflow:hidden;height:clamp(200px,24vw,300px);box-shadow:var(--sombra)}
+.faixa-comida img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+@media (hover:hover){.faixa-comida:hover img{transform:scale(1.03)}}
+.faixa-comida p{position:absolute;left:clamp(20px,3vw,40px);bottom:clamp(18px,2.6vw,32px);z-index:2;font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.5rem);color:#fff;line-height:1.08;max-width:18ch;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.faixa-comida::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,37,27,.75),rgba(20,37,27,.1) 60%)}
+
+/* flor interativa */
+.areas{position:relative;overflow:hidden;padding:clamp(90px,10vw,130px) 0;background:radial-gradient(800px 600px at 25% 50%,rgba(143,192,111,.16),transparent 60%),var(--musgo);color:var(--creme)}
+.areas-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(30px,5vw,56px)}
+.areas-cab .lead{max-width:38ch}
+.areas-grade{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,70px);align-items:center}
+.disco{position:relative;width:min(100%,500px);aspect-ratio:1;justify-self:center;--r:0deg}
+.disco .rot{position:absolute;inset:0;transform:rotate(var(--r));transition:transform .9s var(--ease)}
+.disco svg{width:100%;height:100%;overflow:visible}
+.disco .p-verde{fill:rgba(143,192,111,.18);stroke:rgba(143,192,111,.55);stroke-width:1;transition:fill .5s,stroke .5s;cursor:pointer}
+.disco .p-verde.on{fill:var(--folha);stroke:var(--folha-viva)}
+@media (hover:hover){.disco .p-verde:not(.on):hover{fill:rgba(143,192,111,.34)}}
+.disco .p-lar{fill:none;stroke:var(--laranja);stroke-width:1.2;pointer-events:none}
+.disco .miolo circle{fill:none;stroke:var(--laranja);stroke-width:1.1}
+.disco .miolo .c{fill:var(--laranja);stroke:none}
+.rotulos{position:absolute;inset:0}
+.rotulo{position:absolute;left:50%;top:50%;width:0;height:0;transition:transform .9s var(--ease)}
+.rotulo button{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(217,199,166,.35);background:rgba(20,37,27,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--creme);font-weight:600;font-size:.92rem;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .18s var(--ease);-webkit-tap-highlight-color:transparent}
+.rotulo button:active{transform:translate(-50%,-50%) scale(.96)}
+.rotulo button[aria-pressed="true"]{background:var(--creme);color:var(--floresta);border-color:var(--creme)}
+@media (hover:hover){.rotulo button[aria-pressed="false"]:hover{border-color:var(--folha);background:rgba(20,37,27,.9)}}
+.painel{position:relative;min-height:440px}
+.chips-areas{display:none;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.chips-areas button{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid rgba(217,199,166,.35);background:rgba(20,37,27,.5);color:var(--creme);font-weight:600;font-size:.88rem;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .25s,color .25s}
+.chips-areas button[aria-pressed="true"]{background:var(--creme);color:var(--floresta);border-color:var(--creme)}
+.pn{position:absolute;inset:0 0 auto;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .35s var(--ease),transform .45s var(--ease),visibility .35s}
+.pn.on{position:relative;opacity:1;visibility:visible;transform:none}
+.pn h3{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:14px}
+.pn > p{color:rgba(244,240,231,.9);margin-bottom:22px;max-width:46ch}
+.itens{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.itens li{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-radius:14px;background:rgba(244,240,231,.06);border:1px solid rgba(217,199,166,.14);font-size:.98rem}
+.itens li svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--folha)}
+.escolhido{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:.9rem;color:var(--linho)}
+.escolhido svg{width:18px;height:18px;color:var(--folha)}
+
+/* em casa */
+.casa{position:relative;padding:clamp(90px,10vw,130px) 0;background:var(--creme-2)}
+.mosaico{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr) minmax(0,.85fr);grid-template-rows:auto auto;gap:22px;align-items:stretch}
+.m-foto{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sombra);background:#cfc6b3}
+.m-foto img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+@media (hover:hover){.m-foto:hover img{transform:scale(1.03)}}
+.m-cozinha{grid-row:1 / span 2;align-self:center;aspect-ratio:1}
+.m-treino{grid-column:3;grid-row:1 / span 2;margin-top:70px;max-height:560px}
+.m-treino img{object-position:50% 20%}
+.m-texto{padding:clamp(6px,1vw,14px) clamp(4px,1vw,12px) 0}
+.m-texto h2{margin-bottom:20px;color:var(--floresta)}
+.m-texto .lead{margin-bottom:18px}
+.m-texto blockquote{margin:0;font-family:var(--serif);font-size:1.3rem;line-height:1.3;color:var(--floresta)}
+.m-voz{grid-column:2;position:relative;background:var(--floresta);color:var(--creme);border-radius:24px;padding:30px 30px 26px;box-shadow:var(--sombra-forte);margin:0 -30px 0 -50px;z-index:2}
+.m-voz p{font-size:1.06rem;line-height:1.55}
+.m-voz footer{margin-top:14px;font-size:.88rem;color:var(--linho)}
+.m-voz .aspas{position:absolute;right:22px;top:-26px;font-family:var(--serif);font-size:6rem;line-height:1;color:var(--folha)}
+.etiqueta{position:absolute;left:14px;bottom:14px;padding:8px 12px;border-radius:12px;background:rgba(20,37,27,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--creme);font-size:.82rem;font-weight:600}
+
+/* PNI */
+.pni{position:relative;overflow:hidden;padding:clamp(90px,10vw,130px) 0;color:var(--creme);background:radial-gradient(900px 500px at 85% 0%,rgba(143,192,111,.14),transparent 60%),linear-gradient(180deg,var(--floresta),var(--floresta-2))}
+.pni-cab{max-width:760px;margin-bottom:clamp(40px,6vw,70px)}
+.pni-cab h2 span{color:var(--folha)}
+.percurso{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.trilha{position:absolute;left:0;right:0;top:34px;height:2px;pointer-events:none}
+.trilha svg{width:100%;height:40px;overflow:visible;position:absolute;top:-19px}
+.trilha .base{stroke:rgba(217,199,166,.22);stroke-width:2;fill:none;stroke-dasharray:4 8}
+.trilha .viva{stroke:var(--folha);stroke-width:2.5;fill:none;stroke-linecap:round}
+.etapa{position:relative;padding-top:92px}
+.no{position:absolute;top:-10px;left:-6px;width:86px;height:86px}
+.no svg{width:100%;height:100%;overflow:visible}
+.no .pv{fill:rgba(143,192,111,.0);stroke:rgba(143,192,111,.6);stroke-width:1.5;transition:fill .6s var(--ease),stroke .6s}
+.no .pl{fill:none;stroke:var(--laranja);stroke-width:1.2;opacity:.6;transition:opacity .6s}
+.etapa.on .pv{fill:var(--folha);stroke:var(--folha-viva)}
+.etapa.on .pl{opacity:1}
+.cartao-etapa{background:rgba(244,240,231,.06);border:1px solid rgba(217,199,166,.16);border-radius:22px;padding:24px 24px 26px;transition:background-color .5s,border-color .5s,transform .5s var(--ease)}
+.etapa.on .cartao-etapa{background:rgba(244,240,231,.1);border-color:rgba(143,192,111,.45)}
+.cartao-etapa small{display:block;font-size:.85rem;font-weight:600;color:var(--folha);margin-bottom:8px}
+.cartao-etapa h3{font-size:1.75rem;margin-bottom:10px}
+.cartao-etapa p{color:rgba(244,240,231,.88);font-size:.98rem}
+.incluso{margin-top:clamp(40px,5vw,60px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:center;padding-top:clamp(30px,4vw,44px);border-top:1px solid rgba(217,199,166,.16)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;background:var(--creme);color:var(--floresta);font-weight:600;font-size:.93rem}
+.chips svg{width:16px;height:16px;color:var(--musgo)}
+.incluso blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.3;color:var(--creme)}
+.incluso blockquote footer{font-family:var(--sans);font-size:.88rem;color:var(--linho);margin-top:10px}
+
+/* on-line */
+.online{padding:clamp(90px,10vw,130px) 0;background:var(--creme)}
+.online .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,90px);align-items:center}
+.folha-foto{position:relative;aspect-ratio:4/5;max-width:470px;width:100%}
+.folha-foto .f{position:absolute;inset:0;border-radius:4px 46% 4px 46%;overflow:hidden;box-shadow:var(--sombra-forte);background:#d9d6cf}
+.folha-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 1.2s var(--ease)}
+@media (hover:hover){.folha-foto:hover img{transform:scale(1.03)}}
+.folha-foto .atras{position:absolute;inset:0;border-radius:4px 46% 4px 46%;border:1.5px solid var(--laranja);transform:translate(18px,18px);z-index:-1}
+.online h2{color:var(--floresta);margin-bottom:18px}
+.passos{list-style:none;margin:32px 0 0;padding:0;counter-reset:p;display:grid;gap:14px}
+.passos li{counter-increment:p;display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border-radius:18px;padding:16px 20px 16px 16px;box-shadow:var(--sombra)}
+.passos li::before{content:counter(p);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--floresta);color:var(--creme);font-family:var(--serif);font-size:1.4rem}
+.passos b{display:block;color:var(--floresta)}
+.passos span{color:var(--tinta-2);font-size:.96rem}
+
+/* depoimentos */
+.depo{position:relative;overflow:hidden;padding:clamp(90px,10vw,130px) 0;background:var(--musgo);color:var(--creme)}
+.depo-cab{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:end;margin-bottom:clamp(40px,5vw,60px)}
+.contadores{display:flex;gap:16px;flex-wrap:wrap}
+.contador{padding:18px 22px;border-radius:20px;background:rgba(20,37,27,.5);border:1px solid rgba(217,199,166,.18);min-width:170px}
+.contador b{display:block;font-family:var(--serif);font-weight:400;font-size:2.8rem;line-height:1;color:var(--folha)}
+.contador > span{font-size:.88rem;color:rgba(244,240,231,.8)}
+.vozes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.voz{position:relative;background:var(--creme);color:var(--tinta);border-radius:24px;padding:34px 28px 26px;box-shadow:var(--sombra-forte);transition:transform .35s var(--ease)}
+.voz:nth-child(2){margin-top:46px;background:var(--floresta);color:var(--creme)}
+.voz:nth-child(3){margin-top:16px}
+@media (hover:hover){.voz:hover{transform:translateY(-4px)}}
+.voz .aspas{font-family:var(--serif);font-size:4.4rem;line-height:.6;color:var(--laranja);display:block;height:28px}
+.voz:nth-child(2) .aspas{color:var(--folha)}
+.voz .dest{font-family:var(--serif);font-size:1.42rem;line-height:1.25;margin:10px 0 14px}
+.voz .resto{font-size:.96rem;color:var(--tinta-2);display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.voz:nth-child(2) .resto{color:rgba(244,240,231,.78)}
+.voz .resto > div{overflow:hidden}
+.voz.aberta .resto{grid-template-rows:1fr}
+.voz .mais{margin-top:6px;background:none;border:0;padding:10px 0;min-height:44px;font-weight:600;color:var(--laranja-t);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.voz:nth-child(2) .mais{color:var(--folha)}
+.voz .mais svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+.voz.aberta .mais svg{transform:rotate(180deg)}
+.voz footer{display:flex;align-items:center;gap:12px;margin-top:10px;padding-top:16px;border-top:1px solid rgba(26,42,32,.12)}
+.voz:nth-child(2) footer{border-color:rgba(217,199,166,.18)}
+.voz footer i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--floresta);color:var(--creme);font-style:normal;font-family:var(--serif);font-size:1.1rem}
+.voz:nth-child(2) footer i{background:var(--folha);color:var(--floresta)}
+.voz footer b{display:block;font-size:.98rem}
+.voz footer span{font-size:.84rem;opacity:.75}
+.fonte{margin-top:28px;font-size:.86rem;color:rgba(244,240,231,.6)}
+
+/* quem sou */
+.quem{position:relative;padding:clamp(90px,10vw,130px) 0;background:var(--creme);overflow:hidden}
+.quem .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,90px);align-items:center}
+.quem h2{color:var(--floresta);font-size:clamp(2.6rem,5.4vw,4.6rem);margin-bottom:22px}
+.quem p + p{margin-top:14px}
+.quem .lead{color:var(--tinta)}
+.selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.selos span{padding:10px 16px;border-radius:999px;border:1px solid rgba(44,74,54,.25);font-size:.92rem;font-weight:600;color:var(--musgo);background:rgba(255,255,255,.5)}
+.redes{display:flex;gap:18px;margin-top:28px;flex-wrap:wrap}
+.redes a{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--floresta);text-decoration:none;min-height:44px;border-bottom:1.5px solid var(--laranja)}
+.retrato-q{position:relative;justify-self:center;width:min(100%,430px);aspect-ratio:4/5}
+.retrato-q .f{position:absolute;inset:0;border-radius:46% 4px 46% 4px;overflow:hidden;box-shadow:var(--sombra-forte);background:#e0dcd4}
+.retrato-q img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.retrato-q svg.flor-q{position:absolute;width:62%;right:-22%;bottom:-16%;z-index:2;filter:drop-shadow(0 10px 24px rgba(20,37,27,.25))}
+
+/* final */
+.agendar{position:relative;overflow:hidden;text-align:center;padding:clamp(110px,12vw,160px) 0;background:radial-gradient(700px 500px at 50% 50%,rgba(143,192,111,.22),transparent 65%),var(--floresta);color:var(--creme)}
+.agendar .flor-final{position:absolute;left:50%;top:50%;width:min(110vw,820px);transform:translate(-50%,-50%);opacity:.9;pointer-events:none}
+.agendar .wrap{position:relative;z-index:2}
+.agendar h2{font-size:clamp(2.4rem,5.4vw,4.4rem);max-width:17ch;margin:0 auto 20px}
+.agendar .lead{margin:0 auto 34px}
+.agendar .btn{min-height:56px;padding:0 30px;font-size:1.06rem}
+
+/* rodapé */
+.rodape{background:var(--floresta-2);color:rgba(244,240,231,.78);padding:64px 0 120px;font-size:.95rem}
+.rodape .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:36px}
+.rodape h4{margin:0 0 12px;font-size:.95rem;color:var(--creme)}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rodape a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:32px}
+@media (hover:hover){.rodape a:hover{color:var(--folha)}}
+.rodape a svg{width:18px;height:18px}
+.rodape .marca{margin-bottom:14px}
+.rodape .base{grid-column:1/-1;border-top:1px solid rgba(217,199,166,.12);padding-top:22px;font-size:.84rem;color:rgba(244,240,231,.55)}
+
+/* barra celular */
+.barra{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
+.barra.ver{transform:none}
+.barra .btn{width:100%;justify-content:center;min-height:54px;box-shadow:0 16px 40px -12px rgba(0,0,0,.55)}
+
+/* revelação */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.rv.vis{opacity:1;transform:none}
+.princ.rv.vis:nth-child(2){transform:translateY(28px)}
+.princ.rv.vis:nth-child(3){transform:translateY(56px)}
+
+/* entrada da abertura */
+.ent .l > span{transform:translateY(105%)}
+.ent .entra{opacity:0;transform:translateY(16px)}
+.ent .moldura{clip-path:inset(18% 18% 18% 18% round 40px);opacity:0}
+.ent .vidro{opacity:0;scale:.92}
+.ent .flor-fundo .contorno{stroke-dashoffset:var(--len)}
+.foi .l > span{transform:none;transition:transform 1s var(--ease)}
+.foi .l:nth-child(2) > span{transition-delay:.09s}
+.foi .l:nth-child(3) > span{transition-delay:.18s}
+.foi .entra{opacity:1;transform:none;transition:opacity .8s var(--ease) .38s,transform .9s var(--ease) .38s}
+.foi .entra.d2{transition-delay:.5s}
+.foi .entra.d3{transition-delay:.62s}
+.foi .moldura{clip-path:inset(0 0 0 0 round 0);opacity:1;transition:clip-path 1.3s var(--ease) .1s,opacity .6s .1s}
+.foi .vidro{opacity:1;scale:1;transition:opacity .6s var(--ease),scale .7s var(--ease)}
+.foi .v1{transition-delay:.85s}.foi .v2{transition-delay:1s}.foi .v3{transition-delay:1.15s}
+.foi .flor-fundo .contorno{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s var(--ease-io) .25s}
+
+@media (max-width:1080px){
+  .menu{display:none}
+  .topo .btn{display:none}
+  .abrir{display:grid}
+  .v1{left:-4%}.v2{right:-4%}.v3{right:-2%}
+}
+@media (max-width:900px){
+  body{font-size:16px}
+  .abertura{padding:96px 0 70px;min-height:auto}
+  .abertura .wrap{grid-template-columns:minmax(0,1fr)}
+  .palco{width:min(78%,330px);order:-1;margin:0 auto 6px}
+  .abertura h1{margin-bottom:20px}
+  .v2{display:none}
+  .v3{top:auto;bottom:-5%;right:-12%}
+  .v1{left:-12%;bottom:22%}
+  .func-topo,.areas-grade,.online .wrap,.quem .wrap,.incluso,.depo-cab{grid-template-columns:minmax(0,1fr)}
+  .principios,.vozes{grid-template-columns:minmax(0,1fr)}
+  .princ:nth-child(n),.princ.rv.vis:nth-child(n){transform:none}
+  .voz:nth-child(n){margin-top:0}
+  .areas-cab{flex-direction:column;align-items:flex-start}
+  .painel{min-height:0}
+  .rotulos{display:none}
+  .chips-areas{display:flex}
+  .disco{width:min(78%,340px)}
+  .percurso{grid-template-columns:minmax(0,1fr);gap:18px}
+  .trilha{left:34px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .trilha svg{display:none}
+  .trilha::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(217,199,166,.25) 0 4px,transparent 4px 12px)}
+  .trilha::after{content:"";position:absolute;left:0;top:0;width:2px;height:calc(var(--p,0)*100%);background:var(--folha)}
+  .etapa{padding:0 0 0 92px;min-height:70px}
+  .mosaico{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto}
+  .m-texto{grid-column:1/-1;grid-row:1}
+  .m-cozinha{grid-column:1;grid-row:2;align-self:start;aspect-ratio:1}
+  .m-treino{grid-column:2;grid-row:2;margin-top:40px;max-height:none;aspect-ratio:9/16}
+  .m-voz{grid-column:1/-1;grid-row:3;margin:0}
+  .folha-foto{max-width:380px;justify-self:center}
+  .retrato-q{grid-row:1;width:min(84%,360px)}
+  .rodape .wrap{grid-template-columns:minmax(0,1fr)}
+  .barra{display:block}
+}
+@media (max-width:560px){
+  .marca b{font-size:1.15rem}
+  .vidro{padding:10px 14px;border-radius:14px}
+  .vidro b{font-size:1.25rem}.vidro .grande{font-size:2rem}
+  .vidro span{font-size:.78rem}
+  .rotulo button{font-size:.8rem;padding:0 12px;min-height:40px}
+  .faixa-comida p{max-width:14ch}
+  .contador{min-width:0;flex:1}
+  .contador b{font-size:2.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="pet" d="M0 -6 C -26 -28 -30 -74 0 -104 C 30 -74 26 -28 0 -6Z"/>
+    <path id="pet-l" d="M0 -2 C -34 -32 -36 -84 0 -112 C 36 -84 34 -32 0 -2Z"/>
+  </defs>
+  <symbol id="flor" viewBox="-120 -120 240 240">
+    <g fill="#8FC06F"><use href="#pet"/><use href="#pet" transform="rotate(72)"/><use href="#pet" transform="rotate(144)"/><use href="#pet" transform="rotate(216)"/><use href="#pet" transform="rotate(288)"/></g>
+    <g fill="none" stroke="#E2793D" stroke-width="7" stroke-linejoin="round"><use href="#pet-l" transform="rotate(36)"/><use href="#pet-l" transform="rotate(108)"/><use href="#pet-l" transform="rotate(180)"/><use href="#pet-l" transform="rotate(252)"/><use href="#pet-l" transform="rotate(324)"/></g>
+    <circle r="11" fill="#E2793D"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M12 4v16m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.2c0-.8.2-1.4 1.4-1.4h1.5V5.3c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6V11H8.4v2.8h2.4V21h2.7Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+</svg>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Vânia Alonso Nutri, voltar ao início">
+      <svg aria-hidden="true"><use href="#flor"/></svg>
+      <span><b>Vânia Alonso</b><small>nutrição clínica e esportiva funcional</small></span>
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#areas">Áreas</a><a href="#em-casa">Em casa</a><a href="#pni">PNI</a><a href="#online">On-line</a><a href="#depoimentos">Depoimentos</a><a href="#quem-sou">Quem sou</a>
+    </nav>
+    <a class="btn btn-creme" data-wa="Oi, Vânia! Vim pelo site e quero agendar uma consulta."><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+    <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><span></span></button>
+  </div>
+</header>
+<div class="gaveta" id="gaveta">
+  <a href="#areas">Áreas</a><a href="#em-casa">Em casa</a><a href="#pni">PNI</a><a href="#online">On-line</a><a href="#depoimentos">Depoimentos</a><a href="#quem-sou">Quem sou</a>
+  <a class="btn btn-folha" data-wa="Oi, Vânia! Vim pelo site e quero agendar uma consulta."><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+</div>
+
+<main>
+<section class="abertura grao ent" id="inicio" aria-labelledby="titulo">
+  <div class="wrap">
+    <div>
+      <p class="sobre-linha entra">Nutricionista clínica e esportiva funcional</p>
+      <h1 id="titulo"><span class="l"><span>O cuidado</span></span><span class="l"><span>começa na</span></span><span class="l"><span>rotina<span class="ponto">.</span></span></span></h1>
+      <p class="lead entra d2">Do emagrecimento à performance esportiva, da saúde da mulher ao envelhecimento saudável. Atendimento individualizado, humanizado e integrativo há 22 anos.</p>
+      <div class="abertura-acoes entra d3">
+        <span class="local"><i aria-hidden="true"></i>São Paulo · on-line, presencial</span>
+        <a class="descer" href="#areas">Ver por onde começar<svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+      </div>
+    </div>
+    <div class="palco">
+      <svg class="flor-fundo" viewBox="-160 -160 320 320" aria-hidden="true">
+        <g class="gira">
+          <g class="verdes"></g>
+          <g class="laranjas"></g>
+        </g>
+      </svg>
+      <div class="moldura"><img src="img/vania-abertura.jpg?v=1" alt="Vânia Alonso de camisa listrada, com a mão no queixo, diante de uma parede de folhas" width="1104" height="1440" fetchpriority="high"></div>
+      <div class="vidro v1 flutua"><b class="grande" data-conta="22">22</b><span>anos de atendimento</span></div>
+      <div class="vidro v2 flutua"><b>Funcional</b><span>com base em exames laboratoriais</span></div>
+      <div class="vidro v3 flutua"><svg aria-hidden="true"><use href="#flor"/></svg><span>On-line e presencial</span></div>
+    </div>
+  </div>
+  <svg class="borda-onda" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V40C240 8 480 0 720 18s480 46 720 20v32Z" fill="#F4F0E7"/></svg>
+</section>
+
+<section class="funcional" id="funcional" aria-labelledby="t-func">
+  <div class="wrap">
+    <div class="func-topo">
+      <div class="rv">
+        <p class="sobre-linha">Nutrição funcional</p>
+        <h2 id="t-func">Além de números e dietas.</h2>
+      </div>
+      <blockquote class="citacao rv">"Eu <b>reequilibro o seu organismo</b>, considerando desde as suas escolhas até a absorção de nutrientes. Eu <b>corrijo desequilíbrios com base em exames laboratoriais</b>, garantindo um tratamento preciso e personalizado."<cite>Vânia Alonso</cite></blockquote>
+    </div>
+    <div class="principios">
+      <article class="princ rv">
+        <svg aria-hidden="true" viewBox="-120 -120 240 240"><use href="#pet" fill="#8FC06F" transform="scale(1.05)"/><use href="#pet-l" fill="none" stroke="#E2793D" stroke-width="6" transform="rotate(36)"/></svg>
+        <h3>Nutrição natural</h3>
+        <p>Priorizo alimentos frescos, menos processados, mais próximos da natureza. A verdadeira medida está nos nutrientes, não nas calorias.</p>
+      </article>
+      <article class="princ rv">
+        <svg aria-hidden="true" viewBox="-120 -120 240 240"><use href="#pet" fill="#8FC06F" transform="rotate(-36) scale(1.05)"/><use href="#pet" fill="#8FC06F" transform="rotate(36) scale(1.05)"/><use href="#pet-l" fill="none" stroke="#E2793D" stroke-width="6"/></svg>
+        <h3>Comida de verdade</h3>
+        <p>Incentivo o consumo de alimentos não industrializados, orgânicos, gorduras saudáveis e superalimentos. Personalização para atender objetivos e preferências.</p>
+      </article>
+      <article class="princ rv">
+        <svg aria-hidden="true"><use href="#flor"/></svg>
+        <h3>Sem radicalismos</h3>
+        <p>Defendo uma abordagem equilibrada, evitando extremos. Utilizo estudos e prática clínica para orientar escolhas, respeitando a individualidade.</p>
+      </article>
+    </div>
+    <figure class="faixa-comida rv" style="margin-left:0;margin-right:0">
+      <img src="img/comida-legumes.jpg?v=1" alt="Legumes assados: batata, abóbora, cebola roxa, tomate e abobrinha" width="1320" height="543" loading="lazy">
+      <p>Saúde não é só o que você coloca no prato.</p>
+    </figure>
+  </div>
+</section>
+
+<section class="areas grao" id="areas" aria-labelledby="t-areas">
+  <div class="wrap">
+    <div class="areas-cab">
+      <div class="rv">
+        <h2 id="t-areas">Por onde você quer começar?</h2>
+      </div>
+      <p class="lead rv">Toque numa pétala. O botão de agendar passa a levar o assunto escolhido.</p>
+    </div>
+    <div class="areas-grade">
+      <div class="disco" id="disco">
+        <div class="rot">
+          <svg viewBox="-130 -130 260 260" aria-hidden="true">
+            <g class="laranjas-d"></g>
+            <g class="verdes-d"></g>
+            <g class="miolo"><circle class="c" r="7"/></g>
+          </svg>
+        </div>
+        <div class="rotulos" role="group" aria-label="Escolha uma área"></div>
+      </div>
+      <div class="chips-areas" role="group" aria-label="Escolha uma área"></div>
+      <div class="painel" aria-live="polite">
+        <div class="pn on" id="mulher" data-i="0">
+          <h3>Saúde da mulher</h3>
+          <p>Cada mulher tratada com abordagem integral e personalizada.</p>
+          <ul class="itens">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Síndrome do ovário policístico, endometriose e TPM</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Menopausa, pré-menopausa e vitalidade</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Hipotireoidismo e outras endocrinopatias, obesidade e câncer</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Saúde óssea e anti-envelhecimento</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ansiedade, compulsão e estresse</li>
+          </ul>
+        </div>
+        <div class="pn" id="estetica" data-i="1">
+          <h3>Estética e emagrecimento</h3>
+          <p>Perda de peso consciente, com emagrecimento efetivo.</p>
+          <ul class="itens">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Redução de medidas e de gordura localizada</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Dieta e suplementação para otimizar tratamentos estéticos faciais e corporais</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cuidado com a pele, a flacidez e as rugas</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mais energia e disposição no dia a dia</li>
+          </ul>
+        </div>
+        <div class="pn" id="gestacao" data-i="2">
+          <h3>Gestação e infância</h3>
+          <p>Do planejamento da gravidez aos hábitos das crianças.</p>
+          <ul class="itens">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Adequações para a saúde reprodutiva e correção de carências nutricionais</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Acompanhamento durante toda a gestação, com plano alimentar e suplementação específica</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Educação nutricional nas diferentes etapas da infância</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Prevenção de obesidade e de doenças na vida adulta</li>
+          </ul>
+        </div>
+        <div class="pn" id="doencas" data-i="3">
+          <h3>Controle de doenças</h3>
+          <p>Nutrição para ajudar no controle e na prevenção.</p>
+          <ul class="itens">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Diabetes e controle da glicemia</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Colesterol, dislipidemia e esteatose hepática</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Gastrite e doenças gastrointestinais</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Redução da inflamação sistêmica e prevenção de doenças crônicas</li>
+          </ul>
+        </div>
+        <div class="pn" id="performance" data-i="4">
+          <h3>Performance</h3>
+          <p>Para emagrecer, render mais no treino ou seguir um plano específico de dieta.</p>
+          <ul class="itens">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plano alimentar para alta performance</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Suplementação individualizada</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Avaliação da composição corporal por bioimpedância</li>
+          </ul>
+        </div>
+        <p class="escolhido"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Assunto escolhido: <b id="assunto">saúde da mulher</b></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="casa" id="em-casa" aria-labelledby="t-casa">
+  <div class="wrap mosaico">
+    <figure class="m-foto m-cozinha rv" style="margin:0"><img src="img/casa-cozinha.jpg?v=1" alt="Mãos temperando legumes numa travessa branca" width="360" height="359" loading="lazy"><span class="etiqueta">Na cozinha</span></figure>
+    <div class="m-texto rv">
+      <p class="sobre-linha">Personal Diet em domicílio</p>
+      <h2 id="t-casa">A nutricionista dentro da sua casa.</h2>
+      <p class="lead">Acompanho de perto a rotina do paciente e da família, em casa: anamnese com avaliação de composição corporal por bioimpedância, cardápio personalizado e dicas culinárias.</p>
+      <blockquote>"Como praticante de esportes desde sempre, e como mãe, aplico em casa a ciência da nutrição."</blockquote>
+    </div>
+    <figure class="m-foto m-treino rv" style="margin:0"><img src="img/casa-treino.jpg?v=1" alt="Vânia treinando com corda na academia" width="360" height="640" loading="lazy"><span class="etiqueta">No treino</span></figure>
+    <blockquote class="m-voz rv">
+      <span class="aspas" aria-hidden="true">"</span>
+      <p>"As consultas acontecem em domicílio, aonde ela pode também dar orientações prá minha cozinheira, bem como fiscalizar minha geladeira e dispensa de comidas."</p>
+      <footer>José Carlos, paciente há mais de 10 anos</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="pni grao" id="pni" aria-labelledby="t-pni">
+  <div class="wrap">
+    <div class="pni-cab rv">
+      <h2 id="t-pni">PNI, <span>Pacote Nutricional Individualizado</span></h2>
+      <p class="lead" style="margin-top:18px">Supervisão alimentar personalizada para prevenir doenças, promover a saúde e melhorar o desempenho físico e mental.</p>
+    </div>
+    <div class="percurso" id="percurso">
+      <div class="trilha" aria-hidden="true"><svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path class="base" d="M35 20 C 200 2, 330 38, 500 20 S 800 2, 1000 20"/><path class="viva" d="M35 20 C 200 2, 330 38, 500 20 S 800 2, 1000 20"/></svg></div>
+      <div class="etapa">
+        <div class="no" aria-hidden="true"><svg viewBox="-120 -120 240 240"><use class="pl" href="#pet-l" transform="rotate(36)"/><use class="pv" href="#pet"/></svg></div>
+        <div class="cartao-etapa"><small>1 hora · presencial</small><h3>Consulta</h3><p>Com formulário preenchido antes. Anamnese funcional: sua história, sintomas, rotina e hábitos, além da avaliação física.</p></div>
+      </div>
+      <div class="etapa">
+        <div class="no" aria-hidden="true"><svg viewBox="-120 -120 240 240"><use class="pl" href="#pet-l" transform="rotate(36)"/><use class="pv" href="#pet"/><use class="pv" href="#pet" transform="rotate(72)"/></svg></div>
+        <div class="cartao-etapa"><small>30 minutos · on-line ou presencial</small><h3>Primeiro retorno</h3><p>Pode ser on-line ou presencial.</p></div>
+      </div>
+      <div class="etapa">
+        <div class="no" aria-hidden="true"><svg viewBox="-120 -120 240 240"><use class="pl" href="#pet-l" transform="rotate(36)"/><use class="pv" href="#pet"/><use class="pv" href="#pet" transform="rotate(72)"/><use class="pv" href="#pet" transform="rotate(144)"/></svg></div>
+        <div class="cartao-etapa"><small>30 minutos · presencial</small><h3>Segundo retorno</h3><p>Presencial, também incluído no pacote.</p></div>
+      </div>
+    </div>
+    <div class="incluso">
+      <div class="chips rv">
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Bioimpedância</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Plano nutricional</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Material de apoio</span>
+      </div>
+      <blockquote class="rv">"Os resultados serão eficazes se o meu conhecimento estiver alinhado ao seu comprometimento!"<footer>Vânia Alonso</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="online" id="online" aria-labelledby="t-online">
+  <div class="wrap">
+    <div class="folha-foto rv"><div class="atras" aria-hidden="true"></div><div class="f"><img src="img/vania-folhas.jpg?v=1" alt="Vânia Alonso de blusa branca, em frente a uma parede de folhas" width="677" height="912" loading="lazy"></div></div>
+    <div class="rv">
+      <h2 id="t-online">Atendimento on-line, onde você estiver.</h2>
+      <p class="lead">As consultas virtuais são personalizadas e adaptadas às suas necessidades, como as presenciais, sem fronteiras geográficas.</p>
+      <ol class="passos">
+        <li><span><b>Agende pelo WhatsApp</b>(11) 98381-9390</span></li>
+        <li><span><b>Consulta personalizada</b>Por plataforma segura, no conforto da sua casa.</span></li>
+        <li><span><b>Plano e materiais</b>Plano alimentar, orientações e materiais de apoio enviados virtualmente.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="depo grao" id="depoimentos" aria-labelledby="t-depo">
+  <div class="wrap">
+    <div class="depo-cab">
+      <div class="rv">
+        <h2 id="t-depo">O que dizem os pacientes</h2>
+      </div>
+      <div class="contadores rv">
+        <div class="contador"><b><span data-conta="22">22</span></b><span>anos de atendimento</span></div>
+        <div class="contador"><b>+<span data-conta="10">10</span></b><span>anos com o mesmo paciente</span></div>
+      </div>
+    </div>
+    <div class="vozes">
+      <article class="voz rv">
+        <span class="aspas" aria-hidden="true">"</span>
+        <p class="dest">"Ao final da gestação havia ganhado 8 quilos somente, peso que logo perdi."</p>
+        <div class="resto" id="r1"><div><p>"O peso que eu poderia ganhar em uma gestação sempre me preocupou, mas, muito além do ganho de peso, ter nas minhas mãos a responsabilidade de gerar uma vida me fez decidir adotar um estilo de vida mais saudavel. Então procurei a Vânia, e comecei a seguir um plano alimentar e a tomar os suplementos que ela prescreveu de forma personalizada. Aprendi a fazer boas escolhas alimentares pro meu bem estar e prá formação fetal. Ao final da gestação havia ganhado 8 quilos somente, peso que logo perdi, e tive um filho lindo e perfeito! Além disso, consegui superar logo a fase dos enjoos e tive muita disposição mesmo no final da gestação."</p></div></div>
+        <button class="mais" type="button" aria-expanded="false" aria-controls="r1">Ler o depoimento<svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <footer><i aria-hidden="true">R</i><div><b>Roberta Amieiro</b><span>Acompanhamento na gestação</span></div></footer>
+      </article>
+      <article class="voz rv">
+        <span class="aspas" aria-hidden="true">"</span>
+        <p class="dest">"Sou cliente da Vania há mais de 10 anos, sou atleta e preciso de suplementos individualizados."</p>
+        <div class="resto" id="r2"><div><p>"Tenho facilidade de perda de massa magra, mas com as estratégias nutricionais, mantenho sempre uma boa forma física. Estou muito satisfeito. Prá praticidade da nossa família as consultas acontecem em domicilio, aonde ela pode também dar orientações prá minha cozinheira, bem como fiscalizar minha geladeira e dispensa de comidas."</p></div></div>
+        <button class="mais" type="button" aria-expanded="false" aria-controls="r2">Ler o depoimento<svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <footer><i aria-hidden="true">J</i><div><b>José Carlos</b><span>Atleta, atendido em casa</span></div></footer>
+      </article>
+      <article class="voz rv">
+        <span class="aspas" aria-hidden="true">"</span>
+        <p class="dest">"Ao longo das consultas com a Vânia Alonso, meu interesse e apreço pelos alimentos cresceram."</p>
+        <div class="resto" id="r3"><div><p>"Descobri uma nutricionista com uma abordagem funcional/esportiva que chamou minha atenção. Decidi experimentar, e ao longo das consultas com a Vânia Alonso, meu interesse e apreço pelos alimentos cresceram. Essa parceria começou a transformar minha vida de maneiras incríveis!"</p></div></div>
+        <button class="mais" type="button" aria-expanded="false" aria-controls="r3">Ler o depoimento<svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <footer><i aria-hidden="true">V</i><div><b>Vanessa Carla da Silva</b><span>Abordagem funcional e esportiva</span></div></footer>
+      </article>
+    </div>
+    <p class="fonte">Depoimentos publicados no site vanianutri.com.br.</p>
+  </div>
+</section>
+
+<section class="quem" id="quem-sou" aria-labelledby="t-quem">
+  <div class="wrap">
+    <div class="rv">
+      <h2 id="t-quem">Vânia Alonso</h2>
+      <p class="lead">Com 22 anos de experiência no atendimento individualizado, humanizado e integrativo, atuo na prevenção e no tratamento de doenças, na melhoria da performance física e na mudança de hábitos.</p>
+      <p>Sou nutricionista comprometida com emagrecimento, performance esportiva, saúde da mulher, envelhecimento saudável e educação nutricional. Trabalho com foco em nutrição integrativa: os nutrientes da alimentação e da suplementação são o meu objeto de estudo.</p>
+      <div class="selos"><span>Nutrição clínica</span><span>Esportiva funcional</span><span>Integrativa</span></div>
+      <div class="redes">
+        <a href="https://www.instagram.com/vania.nutri/" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-insta"/></svg>@vania.nutri</a>
+        <a href="https://www.facebook.com/vania.alonso.7" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-face"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="retrato-q rv">
+      <div class="f"><img src="img/vania-cafe.jpg?v=1" alt="Vânia Alonso sentada numa poltrona, com uma xícara de café" width="641" height="907" loading="lazy"></div>
+      <svg class="flor-q" aria-hidden="true"><use href="#flor"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="agendar grao" id="agendar" aria-labelledby="t-agendar">
+  <svg class="flor-final" viewBox="-160 -160 320 320" aria-hidden="true"><g class="ff-v"></g><g class="ff-l"></g></svg>
+  <div class="wrap">
+    <h2 id="t-agendar" class="rv">O primeiro cuidado com a sua saúde começa com você.</h2>
+    <p class="lead rv">Agende pelo WhatsApp. Atendimento on-line e presencial em São Paulo.</p>
+    <a class="btn btn-folha rv" data-wa="Oi, Vânia! Vim pelo site e quero agendar uma consulta."><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+  </div>
+</section>
+</main>
+
+<footer class="rodape" id="rodape">
+  <div class="wrap">
+    <div>
+      <a class="marca" href="#inicio"><svg aria-hidden="true"><use href="#flor"/></svg><span><b>Vânia Alonso</b><small>nutrição clínica e esportiva funcional</small></span></a>
+      <p>São Paulo · on-line, presencial</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a data-wa="Oi, Vânia! Vim pelo site e quero agendar uma consulta."><svg aria-hidden="true"><use href="#i-wa"/></svg>(11) 98381-9390</a></li>
+        <li><a href="mailto:contato@vanianutri.com.br"><svg aria-hidden="true"><use href="#i-mail"/></svg>contato@vanianutri.com.br</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Redes</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/vania.nutri/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a></li>
+        <li><a href="https://www.facebook.com/vania.alonso.7" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-face"/></svg>Facebook</a></li>
+      </ul>
+    </div>
+    <p class="base">Vânia Alonso Nutri · Vanianutri, CNPJ 50.039.594/0001-12</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra"><a class="btn btn-folha" data-wa="Oi, Vânia! Vim pelo site e quero agendar uma consulta."><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a></div>
+
+<script>
+(function(){
+  var numero = '5511983819390';
+  var padrao = 'Oi, Vânia! Vim pelo site e quero agendar uma consulta.';
+  var escolha = null;
+  var reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function link(msg){ return 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg); }
+  function atualizaWA(){
+    document.querySelectorAll('[data-wa]').forEach(function(a){
+      a.href = link(escolha || a.getAttribute('data-wa'));
+      a.target = '_blank'; a.rel = 'noopener';
+    });
+  }
+  atualizaWA();
+
+  function usar(g, id, rot, cls){ var u = document.createElementNS(NS,'use'); u.setAttribute('href', id); u.setAttribute('transform','rotate(' + rot + ')'); if(cls) u.setAttribute('class', cls); g.appendChild(u); return u; }
+
+  /* flor da abertura: contorno que se desenha */
+  var fv = document.querySelector('.flor-fundo .verdes'), fl = document.querySelector('.flor-fundo .laranjas');
+  for (var i = 0; i < 5; i++){
+    var v = usar(fv, '#pet', i*72, 'petala-v'); v.setAttribute('transform','rotate(' + (i*72) + ') scale(1.36)');
+    var p = document.createElementNS(NS,'path');
+    p.setAttribute('d','M0 -2 C -34 -32 -36 -84 0 -112 C 36 -84 34 -32 0 -2Z');
+    p.setAttribute('class','contorno'); p.setAttribute('transform','rotate(' + (36 + i*72) + ') scale(1.4)');
+    fl.appendChild(p);
+    var len = Math.ceil(p.getTotalLength()) + 2;
+    p.style.strokeDasharray = len; p.style.setProperty('--len', len);
+    p.style.transitionDelay = (0.25 + i*0.12) + 's';
+  }
+
+  /* flor final */
+  var ffv = document.querySelector('.ff-v'), ffl = document.querySelector('.ff-l');
+  for (i = 0; i < 5; i++){
+    var a = usar(ffv, '#pet', i*72); a.setAttribute('transform','rotate(' + (i*72) + ') scale(1.36)'); a.setAttribute('fill','rgba(143,192,111,.10)'); a.setAttribute('stroke','rgba(143,192,111,.35)'); a.setAttribute('stroke-width','.8');
+    var b = usar(ffl, '#pet-l', 36 + i*72); b.setAttribute('transform','rotate(' + (36 + i*72) + ') scale(1.4)'); b.setAttribute('fill','none'); b.setAttribute('stroke','rgba(226,121,61,.55)'); b.setAttribute('stroke-width','.9');
+  }
+
+  /* entrada */
+  var ab = document.querySelector('.abertura');
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ ab.classList.add('foi'); ab.classList.remove('ent'); }); });
+
+  /* topo e menu */
+  var topo = document.getElementById('topo');
+  var abrir = document.querySelector('.abrir');
+  function rolou(){ topo.classList.toggle('cheio', scrollY > 40); }
+  addEventListener('scroll', rolou, {passive:true}); rolou();
+  abrir.addEventListener('click', function(){
+    var on = document.body.classList.toggle('menu-aberto');
+    abrir.setAttribute('aria-expanded', on); abrir.setAttribute('aria-label', on ? 'Fechar menu' : 'Abrir menu');
+  });
+  document.querySelectorAll('.gaveta a').forEach(function(a){ a.addEventListener('click', function(){ document.body.classList.remove('menu-aberto'); abrir.setAttribute('aria-expanded', false); abrir.setAttribute('aria-label','Abrir menu'); }); });
+  addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('menu-aberto')) abrir.click(); });
+
+  /* flor interativa */
+  var areas = [
+    {id:'mulher', nome:'Saúde da mulher', assunto:'saúde da mulher', msg:'Oi, Vânia! Vim pelo site e quero agendar uma consulta sobre saúde da mulher.'},
+    {id:'estetica', nome:'Estética e emagrecimento', assunto:'estética e emagrecimento', msg:'Oi, Vânia! Vim pelo site e quero agendar uma consulta sobre nutrição estética e emagrecimento.'},
+    {id:'gestacao', nome:'Gestação e infância', assunto:'gestação e infância', msg:'Oi, Vânia! Vim pelo site e quero agendar uma consulta sobre gestação ou nutrição infantil.'},
+    {id:'doencas', nome:'Controle de doenças', assunto:'controle de doenças', msg:'Oi, Vânia! Vim pelo site e quero agendar uma consulta para controlar uma doença.'},
+    {id:'performance', nome:'Performance', assunto:'performance', msg:'Oi, Vânia! Vim pelo site e quero agendar uma consulta sobre performance esportiva.'}
+  ];
+  var disco = document.getElementById('disco');
+  var rot = disco.querySelector('.rot');
+  var gv = disco.querySelector('.verdes-d'), gl = disco.querySelector('.laranjas-d');
+  var rotulos = disco.querySelector('.rotulos');
+  var petalas = [], botoes = [], chips = [], atual = 0, giro = 0;
+  var chipsAreas = document.querySelector('.chips-areas');
+  function alvo(){ return innerWidth <= 900 ? 180 : 90; }
+  areas.forEach(function(ar, k){
+    var l = usar(gl, '#pet-l', 36 + k*72, 'p-lar'); l.setAttribute('transform','rotate(' + (36 + k*72) + ') scale(1.02)');
+    var pv = usar(gv, '#pet', k*72, 'p-verde'); pv.setAttribute('transform','rotate(' + (k*72) + ') scale(.98)');
+    pv.addEventListener('click', function(){ escolher(k, true); });
+    petalas.push(pv);
+    var w = document.createElement('div'); w.className = 'rotulo';
+    var bt = document.createElement('button'); bt.type = 'button'; bt.textContent = ar.nome; bt.setAttribute('aria-pressed','false'); bt.setAttribute('aria-controls', ar.id);
+    bt.addEventListener('click', function(){ escolher(k, true); });
+    bt.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === 'ArrowDown'){ e.preventDefault(); escolher((atual+1)%5, true); botoes[atual].focus(); }
+      if(e.key === 'ArrowLeft' || e.key === 'ArrowUp'){ e.preventDefault(); escolher((atual+4)%5, true); botoes[atual].focus(); }
+    });
+    w.appendChild(bt); rotulos.appendChild(w); botoes.push(w);
+    var cb = document.createElement('button'); cb.type = 'button'; cb.textContent = ar.nome; cb.setAttribute('aria-pressed','false'); cb.setAttribute('aria-controls', ar.id);
+    cb.addEventListener('click', function(){ escolher(k, true); });
+    chipsAreas.appendChild(cb); chips.push(cb);
+  });
+  function posiciona(){
+    var R = disco.clientWidth * (innerWidth <= 560 ? .47 : .5);
+    botoes.forEach(function(w, k){
+      var a = k*72 + giro;
+      w.style.transform = 'rotate(' + a + 'deg) translateY(' + (-R) + 'px) rotate(' + (-a) + 'deg)';
+    });
+  }
+  function escolher(k, doUsuario){
+    var desejado = alvo() - k*72;
+    var diff = ((desejado - giro) % 360 + 540) % 360 - 180;
+    giro += diff;
+    disco.style.setProperty('--r', giro + 'deg');
+    posiciona();
+    atual = k;
+    petalas.forEach(function(p, j){ p.classList.toggle('on', j === k); });
+    botoes.forEach(function(w, j){ w.firstChild.setAttribute('aria-pressed', j === k ? 'true' : 'false'); });
+    chips.forEach(function(c, j){ c.setAttribute('aria-pressed', j === k ? 'true' : 'false'); });
+    document.querySelectorAll('.pn').forEach(function(pn){ pn.classList.toggle('on', pn.id === areas[k].id); });
+    document.getElementById('assunto').textContent = areas[k].assunto;
+    if (doUsuario){ escolha = areas[k].msg; atualizaWA(); }
+  }
+  escolher(0, false);
+  var rsz; addEventListener('resize', function(){ clearTimeout(rsz); rsz = setTimeout(function(){ escolher(atual, false); }, 120); });
+  /* arrastar a flor no celular */
+  var x0 = null;
+  disco.addEventListener('pointerdown', function(e){ if(e.pointerType !== 'mouse') x0 = e.clientX; });
+  disco.addEventListener('pointerup', function(e){ if(x0 === null) return; var dx = e.clientX - x0; x0 = null; if(Math.abs(dx) > 40){ escolher(dx < 0 ? (atual+1)%5 : (atual+4)%5, true); } });
+
+  /* revelação */
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px', threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ if(reduz) el.classList.add('vis'); else io.observe(el); });
+
+  /* contadores */
+  function contar(el){
+    var fim = +el.getAttribute('data-conta'); if(reduz){ el.textContent = fim; return; }
+    var t0 = null; function passo(t){ if(!t0) t0 = t; var p = Math.min(1, (t - t0) / 1400); el.textContent = Math.round(fim * (1 - Math.pow(1 - p, 3))); if(p < 1) requestAnimationFrame(passo); }
+    el.textContent = '0'; requestAnimationFrame(passo);
+  }
+  var ioc = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ contar(e.target); ioc.unobserve(e.target); } }); }, {threshold:.6});
+  document.querySelectorAll('[data-conta]').forEach(function(el){ ioc.observe(el); });
+
+  /* percurso do PNI */
+  var perc = document.getElementById('percurso');
+  var viva = perc.querySelector('.viva');
+  var etapas = perc.querySelectorAll('.etapa');
+  var L = viva.getTotalLength(); viva.style.strokeDasharray = L; viva.style.strokeDashoffset = L;
+  function percurso(){
+    var r = perc.getBoundingClientRect();
+    var p = Math.max(0, Math.min(1, (innerHeight * .78 - r.top) / (r.height + innerHeight * .25)));
+    if(reduz) p = 1;
+    viva.style.strokeDashoffset = L * (1 - p);
+    perc.style.setProperty('--p', p);
+    etapas.forEach(function(et, k){ et.classList.toggle('on', p >= k / 3 + .05); });
+  }
+  addEventListener('scroll', percurso, {passive:true}); percurso();
+
+  /* depoimentos */
+  document.querySelectorAll('.voz .mais').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.closest('.voz'); var on = v.classList.toggle('aberta');
+      b.setAttribute('aria-expanded', on); b.firstChild.textContent = on ? 'Fechar' : 'Ler o depoimento';
+    });
+  });
+
+  /* barra do celular: aparece depois da abertura, some no final */
+  var barra = document.getElementById('barra');
+  var passouAbertura = false, noFim = false;
+  new IntersectionObserver(function(es){ passouAbertura = !es[0].isIntersecting; mostra(); }).observe(ab);
+  var fim = [document.getElementById('agendar'), document.getElementById('rodape')], vistos = new Set();
+  var iof = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting || e.boundingClientRect.top < 0) vistos.add(e.target); else vistos.delete(e.target); }); noFim = vistos.size > 0; mostra(); });
+  fim.forEach(function(el){ iof.observe(el); });
+  function mostra(){ barra.classList.toggle('ver', passouAbertura && !noFim); }
+})();
+</script>
+</body>
+</html>
